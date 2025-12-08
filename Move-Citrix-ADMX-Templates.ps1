@@ -21,7 +21,7 @@ function Move-CitrixFile {
 
     if (Test-Path $Source) {
         Write-Host "Moving: $Source → $Destination"
-        Move-Item -Path $Source -Destination $Destination -Force
+        Copy-Item -Path $Source -Destination $Destination -Force
     }
     else {
         Write-Warning "File not found: $Source"
